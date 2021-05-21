@@ -8,6 +8,7 @@ public class SumOfDigits {
 		// TODO Auto-generated method stub
 		int input;
 
+		@SuppressWarnings("resource")
 		Scanner a = new Scanner(System.in);
 		System.out.println("Enter input: ");
 		input = a.nextInt();

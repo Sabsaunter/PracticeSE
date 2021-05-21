@@ -4,7 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.remote.server.handler.GetElementText;
+//import org.openqa.selenium.remote.server.handler.GetElementText;
 import org.openqa.selenium.support.ui.Select;
 
 public class CreateLeadPage {
@@ -122,6 +122,16 @@ public class CreateLeadPage {
 				String companyName = driver.findElement(By.id("viewLead_companyName_sp")).getText();
 				
 				System.out.println("New Company Name is:"+companyName);
+				
+				String companyName2 = driver.findElement(By.id("viewLead_companyName_sp")).getText();
+				
+				if (companyName==companyName2) {
+					
+					System.out.println("Company name has been updated sucessfully");
+					
+				}else
+					System.out.println("Company name not updated");
+				
 		
 		//Thread.sleep(600);
 		
