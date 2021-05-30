@@ -1,5 +1,7 @@
 package other.learning;
 
+import java.util.List;
+
 //import java.util.List;
 
 import org.openqa.selenium.By;
@@ -36,11 +38,22 @@ public class DropDowns {
 		
 		driver.findElement(By.xpath("//*[@id=\'contentblock\']/section/div[5]/select")).sendKeys("Selenium");
 		
+//		WebElement dropDown5 = driver.findElement(By.xpath("//*[@id=\'contentblock\']/section/div[6]/select"));
+//		Select dropDown5Box=new Select(dropDown5);
+//		dropDown5Box.selectByIndex(1);
+//		dropDown5Box.selectByIndex(2);
+//		dropDown5Box.selectByIndex(3);
+		
 		WebElement dropDown5 = driver.findElement(By.xpath("//*[@id=\'contentblock\']/section/div[6]/select"));
+		List<WebElement> element= driver.findElements(By.xpath("//*[@id=\'contentblock\']/section/div[6]/select/option"));
+		int size2=element.size();
 		Select dropDown5Box=new Select(dropDown5);
-		dropDown5Box.selectByIndex(1);
-		dropDown5Box.selectByIndex(2);
-		dropDown5Box.selectByIndex(3);
+		System.out.println(size2);
+		
+		for (int i = 0; i < size2; i++) {
+			
+			dropDown5Box.selectByIndex(i);			
+		}
 		
 	}
 

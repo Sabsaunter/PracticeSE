@@ -18,7 +18,7 @@ public class CreateContact {
 		driver.get("http://leaftaps.com/opentaps/control/main");
 		driver.manage().window().maximize();
 		
-		driver.manage().timeouts().implicitlyWait(3000, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 			
 	//Keyin username and password
 		//driver.findElement(By.id("username")).sendKeys("DemoSalesManager");
